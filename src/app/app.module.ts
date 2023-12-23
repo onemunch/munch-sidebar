@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Import BrowserAnimationsModule
 
 import { AppComponent } from './app.component';
 import { appReducer } from './state/app.reducer';
@@ -21,6 +22,7 @@ import { HeaderComponent } from './components/header/header.component';
     SharedModule,
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     StoreModule.forRoot({ app: appReducer }),
     EffectsModule.forRoot([AppEffects])
   ],

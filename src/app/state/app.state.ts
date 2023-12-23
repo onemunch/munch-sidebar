@@ -1,6 +1,12 @@
-// src/app/store/app.state.ts
 
 export interface AppState {
-    // Define your state properties here
-  }
-  
+  isLoading: boolean;
+  isModalVisible: boolean;  
+  notificationMessage: string | null;
+}
+
+export const initialState: AppState = {
+  isLoading: false,
+  isModalVisible: false,
+  notificationMessage: null,
+};

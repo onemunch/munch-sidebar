@@ -1,6 +1,4 @@
-<!-- loading-spinner.component.html -->
-
-<p-dialog header="Loading" [modal]="true" [closable]="false" [dismissableMask]="false" [responsive]="true"
-  showEffect="fade" [style]="{ 'width': '200px', 'height': '200px', 'position': 'absolute', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%)' }">
-  <p-progressSpinner styleClass="w-4rem h-4rem" strokeWidth="8" fill="var(--surface-ground)" animationDuration=".5s"></p-progressSpinner>
-</p-dialog>
+<div class="loading-overlay">
+    <p-progressSpinner styleClass="w-4rem h-4rem" strokeWidth="8" fill="var(--surface-ground)"
+        animationDuration=".5s"></p-progressSpinner>
+</div>

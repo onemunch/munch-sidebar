@@ -1,36 +1,32 @@
-import { AppState } from './app.state';
-import * as appActions from './app.actions';
 import { createReducer, on } from '@ngrx/store';
 
-export const initialState: AppState = {
-  isLoading: false,
-  isModalVisible: false,
-  notificationMessage: null,
-};
+import { initialState } from './app.state';
+import * as appActions from './app.actions';
 
 export const appReducer = createReducer(
   initialState,
-  on(appActions.startLoading, (state) => {
+
+  on(appActions.START_LOADING, (state) => {
     return { ...state, isLoading: true };
   }),
 
-  on(appActions.stopLoading, (state) => {
+  on(appActions.STOP_LOADING, (state) => {
     return { ...state, isLoading: false };
   }),
 
-  on(appActions.showModal, (state) => {
+  on(appActions.SHOW_MODAL, (state) => {
     return { ...state, isModalVisible: true };
   }),
 
-  on(appActions.hideModal, (state) => {
+  on(appActions.HIDE_MODAL, (state) => {
     return { ...state, isModalVisible: false };
   }),
 
-  on(appActions.setNotification, (state, { message }) => {
+  on(appActions.SET_NOTIFICATION, (state, { message }) => {
     return { ...state, notificationMessage: message };
   }),
 
-  on(appActions.clearNotification, (state) => {
+  on(appActions.CLEAR_NOTIFICATION, (state) => {
     return { ...state, notificationMessage: null };
   })
 

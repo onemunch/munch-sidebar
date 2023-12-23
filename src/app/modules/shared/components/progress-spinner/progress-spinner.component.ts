@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './progress-spinner.component.scss'
 })
 export class ProgressSpinnerComponent {
-
+  
 }

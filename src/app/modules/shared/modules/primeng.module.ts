@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { DialogModule } from 'primeng/dialog';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { ButtonModule } from 'primeng/button';
 
 const primeNgModules:Type<any>[]=[
+  DialogModule,
+  ButtonModule,
   ProgressSpinnerModule,
-  DialogModule
 ]
 
 @NgModule({
