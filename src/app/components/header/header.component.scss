@@ -1,0 +1,12 @@
+// #miniLogo{
+//   background-image: url('./../../../assets/imgs/munchLogo.png');
+// }
+
+#miniLogo {
+    transition: .2s ease-in-out
+}
+
+#miniLogo:hover {
+    transform: rotate(80deg);
+    cursor: pointer;
+}

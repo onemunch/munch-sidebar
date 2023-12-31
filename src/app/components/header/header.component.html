@@ -1,1 +1,12 @@
-<p>header works!</p>
+<p-menubar [model]="[]">
+    <ng-template pTemplate="start">
+        <img (click)="mainService.sidebarVisible = true" id="miniLogo" src="./../../../assets/imgs/munchMitten.png" width="50px"
+            class="mr-2" />
+    </ng-template>
+    <ng-template pTemplate="end">
+        <input type="text" pInputText placeholder="Search" class="w-full" />
+    </ng-template>
+</p-menubar>
+
+
+<app-menu></app-menu>

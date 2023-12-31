@@ -1,0 +1,22 @@
+#munchLogo {
+    width: 200px;
+    height: 120px;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+    background-image: url(./../../../../../assets/imgs/munchLogo.png);
+}
+
+#munchLogo:hover {
+    transform: scale(1.05);
+}
+
+.adjustedLabel{
+    position: relative;
+    top: -7px;
+    left: 15px;
+}
+
+#switchCont{
+    width: fit-content;
+    margin: 0px auto;
+}

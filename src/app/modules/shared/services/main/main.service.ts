@@ -13,6 +13,7 @@ import { selectIsLoading } from '../../../../state/app.selectors';
 export class MainService {
 
   isLoading$: Observable<boolean>;
+  sidebarVisible:boolean = true;
 
   constructor(private store: Store<AppState>) {
     this.isLoading$ = this.store.select(selectIsLoading);

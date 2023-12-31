@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Import BrowserAnimationsModule
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 import { AppComponent } from './app.component';
 import { appReducer } from './state/app.reducer';
 import { AppEffects } from './state/app.effects';
+import { MenuModule } from './modules/menu/menu.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './modules/shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
@@ -19,12 +20,14 @@ import { HeaderComponent } from './components/header/header.component';
     HeaderComponent
   ],
   imports: [
+    MenuModule,
     SharedModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot({ app: appReducer }),
-    EffectsModule.forRoot([AppEffects])
+    EffectsModule.forRoot([AppEffects]),
+    StoreModule.forRoot({ app: appReducer })
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

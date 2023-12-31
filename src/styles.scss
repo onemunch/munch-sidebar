@@ -1,8 +1,26 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden; /* Prevent scrollbars on the body and html */
-  }
-  
-  
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.backImageCov {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.backImageCon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.customIcon {
+  width: 24px;
+  height: 24px;
+  background: no-repeat center center;
+  background-size: cover;
+}

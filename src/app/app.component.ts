@@ -7,7 +7,8 @@ import { MainService } from './modules/shared/services/main/main.service';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit{
-  title = 'munch';
+
+  title = 'MunCH';
 
   constructor(public mainService: MainService){}
 

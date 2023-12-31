@@ -1,5 +1,2 @@
-<app-header></app-header>
+<app-header></app-header><progress-spinner *ngIf="(mainService.isLoading$ | async)"></progress-spinner>
 
-<progress-spinner *ngIf="(mainService.isLoading$ | async)"></progress-spinner>
-
-<button (click)="mainService.startLoading()">Display Loading</button>
