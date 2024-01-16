@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {TranslateService } from '@ngx-translate/core'
+
 import { MainService } from '../../../shared/services/main/main.service';
 
 @Component({
@@ -11,9 +13,15 @@ export class DynamicSidebarComponent {
   isStaticSidebar:boolean = false;
 
 
-  constructor(public mainService: MainService){}
+  constructor(public mainService: MainService, private translate: TranslateService){
+  }
 
   closeSidebar(){
     this.mainService.sidebarVisible = false;
   }
+
+  fixSidebarPosition(){
+    
+  }
+
 }

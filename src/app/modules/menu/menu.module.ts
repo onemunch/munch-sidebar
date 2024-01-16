@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 
-import { FormsModule } from '@angular/forms';
+
 import { SharedModule } from '../shared/shared.module';
+import { createTranslateLoader } from '../../app.module';
 import { MenuRoutingModule } from './menu-routing.module';
 import { MenuComponent } from './components/menu/menu.component';
 import { GeneralMenuComponent } from './components/general-menu/general-menu.component';
 import { CreatorMenuComponent } from './components/creator-menu/creator-menu.component';
 import { ConsumerMenuComponent } from './components/consumer-menu/consumer-menu.component';
 import { DynamicSidebarComponent } from './components/dynamic-sidebar/dynamic-sidebar.component';
+
 
 
 @NgModule({
@@ -22,7 +26,14 @@ import { DynamicSidebarComponent } from './components/dynamic-sidebar/dynamic-si
   imports: [
     CommonModule,
     SharedModule,
-    MenuRoutingModule
+    MenuRoutingModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    })
   ],
   exports:[
     MenuComponent
