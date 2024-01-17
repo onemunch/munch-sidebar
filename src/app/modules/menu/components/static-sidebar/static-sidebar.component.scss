@@ -1,0 +1,29 @@
+#munchLogo {
+    width: 200px;
+    height: 120px;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+    background-image: url(./../../../../../assets/imgs/munchLogo.png);
+}
+
+#staticSidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #FFF;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease-in-out;
+}
+
+#switchCont {
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.adjustedLabel {
+    position: relative;
+    top: -7px;
+    left: 15px;
+}

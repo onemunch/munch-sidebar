@@ -1,1 +1,4 @@
-<dynamic-sidebar></dynamic-sidebar>
+<ng-container *ngIf="mainService.localData$ | async as localData">
+    <dynamic-sidebar *ngIf="!localData.isStaticSidebar"></dynamic-sidebar>
+    <static-sidebar *ngIf="localData.isStaticSidebar"></static-sidebar>
+</ng-container>

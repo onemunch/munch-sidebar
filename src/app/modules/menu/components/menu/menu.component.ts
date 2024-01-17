@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MainService } from '../../../shared/services/main/main.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
 })
 
 export class MenuComponent {
+
+  constructor(public mainService: MainService) { }
 
 }

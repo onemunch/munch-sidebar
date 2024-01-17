@@ -1,12 +1,22 @@
-// #miniLogo{
-//   background-image: url('./../../../assets/imgs/munchLogo.png');
-// }
-
 #miniLogo {
-    transition: .2s ease-in-out
+  transition: .2s ease-in-out
 }
 
 #miniLogo:hover {
-    transform: rotate(80deg);
-    cursor: pointer;
+  transform: rotate(80deg);
+  cursor: pointer;
+}
+
+.fullContainer {
+  display: flex;
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding-left: 300px;
+}
+
+#globalSearchbar {
+  width: 400px !important;
+  text-align: center !important;
 }

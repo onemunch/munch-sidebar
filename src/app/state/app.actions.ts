@@ -8,4 +8,6 @@ export const SHOW_MODAL = createAction('[Notification] Show Modal');
 export const HIDE_MODAL = createAction('[Notification] Hide Modal');
 export const SET_NOTIFICATION = createAction('[Notification] Set Notification', props<{ message: string }>());
 export const CLEAR_NOTIFICATION = createAction('[Notification] Clear Notification');
+export const FETCH_LOCAL_STORAGE = createAction('[Data] Fetch Data From LocalStorage');
+export const FETCHED_LOCAL_STORAGE = createAction('[Data] Fetched Data From LocalStorage', props<{ data: any }>());
 

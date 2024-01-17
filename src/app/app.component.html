@@ -1,2 +1,7 @@
-<app-header></app-header><progress-spinner *ngIf="(mainService.isLoading$ | async)"></progress-spinner>
+<progress-spinner *ngIf="(mainService.isLoading$ | async)"></progress-spinner>
 
+<app-header></app-header>
+
+<div [ngClass]="{ 'main-content': isSidebarStatic(mainService.localData$ | async)}">
+   MAIN CONTENT HERE
+</div>

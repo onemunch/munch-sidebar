@@ -28,7 +28,17 @@ export const appReducer = createReducer(
 
   on(appActions.CLEAR_NOTIFICATION, (state) => {
     return { ...state, notificationMessage: null };
-  })
+  }),
+
+  on(appActions.FETCH_LOCAL_STORAGE, (state) => {
+    return { ...state };
+  }),
+
+  on(appActions.FETCHED_LOCAL_STORAGE, (state, { data }) => ({
+    ...state,
+    isLoading: false,
+    localData: data,
+  }))
 
 );
 

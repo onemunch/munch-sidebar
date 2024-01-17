@@ -11,6 +11,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { GeneralMenuComponent } from './components/general-menu/general-menu.component';
 import { CreatorMenuComponent } from './components/creator-menu/creator-menu.component';
 import { ConsumerMenuComponent } from './components/consumer-menu/consumer-menu.component';
+import { StaticSidebarComponent } from './components/static-sidebar/static-sidebar.component';
 import { DynamicSidebarComponent } from './components/dynamic-sidebar/dynamic-sidebar.component';
 
 
@@ -21,7 +22,8 @@ import { DynamicSidebarComponent } from './components/dynamic-sidebar/dynamic-si
     GeneralMenuComponent,
     CreatorMenuComponent,
     ConsumerMenuComponent,
-    DynamicSidebarComponent
+    DynamicSidebarComponent,
+    StaticSidebarComponent
   ],
   imports: [
     CommonModule,

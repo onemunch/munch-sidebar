@@ -11,4 +11,8 @@ export class HeaderComponent {
 
   constructor(public mainService:MainService){}
 
+  isSidebarStatic(localData: any): any {
+    return localData?.isStaticSidebar;
+  }
+
 }

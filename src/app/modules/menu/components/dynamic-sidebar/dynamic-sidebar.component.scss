@@ -10,36 +10,13 @@
     transform: scale(1.05);
 }
 
-.adjustedLabel{
+.adjustedLabel {
     position: relative;
     top: -7px;
     left: 15px;
 }
 
-#switchCont{
+#switchCont {
     width: fit-content;
     margin: 10px auto;
 }
-
-/* Assuming the sidebar has a class 'custom-sidebar' */
-.custom-sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 300px; /* Adjust the width as needed */
-    overflow-y: auto; /* Enable vertical scrolling if needed */
-    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
-    z-index: 1000; /* Adjust the z-index as needed */
-  }
-  
-  .custom-sidebar-container {
-    position: relative;
-    margin-left: 0; /* Adjust this margin based on the sidebar width */
-    transition: margin-left 0.3s ease-in-out; /* Add a smooth transition effect */
-  }
-  
-  .custom-sidebar-container.active {
-    margin-left: 300px; /* Adjust based on the sidebar width */
-  }
-  

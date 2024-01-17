@@ -17,3 +17,8 @@ export const selectNotificationMessage = createSelector(
   (state) => state.notificationMessage
 );
 
+export const selectLocalData = createSelector(
+  selectAppState,
+  (state) => state.localData
+);
+
