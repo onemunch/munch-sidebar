@@ -38,7 +38,21 @@ export const appReducer = createReducer(
     ...state,
     isLoading: false,
     localData: data,
-  }))
+  })),
+
+  on(appActions.ADJUST_SCREEN_SIZE, (state) => {
+    return {
+      ...state,
+      isLoading: true
+    };
+  }),
+
+  on(appActions.ADJUSTED_SCREEN_SIZE, (state, { data }) => ({
+    ...state,
+    isLoading: false,
+    localData: data,
+  })),
+
 
 );
 

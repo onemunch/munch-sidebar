@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ChipModule } from 'primeng/chip';
 import { TreeModule } from 'primeng/tree';
+import { DockModule } from 'primeng/dock'; 
 import { BadgeModule } from 'primeng/badge';
 import { ChipsModule } from 'primeng/chips';
 import { AvatarModule } from 'primeng/avatar';
@@ -29,6 +30,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 const primeNgModules: Type<any>[] = [
   TreeModule,
   ChipModule,
+  DockModule,
   BadgeModule,
   ChipsModule,
   DialogModule,

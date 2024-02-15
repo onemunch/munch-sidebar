@@ -8,11 +8,20 @@ import { MainService } from '../../modules/shared/services/main/main.service';
 })
 
 export class HeaderComponent {
+  
+  logoHidden:boolean = false;
 
   constructor(public mainService:MainService){}
 
-  isSidebarStatic(localData: any): any {
+  isSidebarStatic(localData: any): boolean {
     return localData?.isStaticSidebar;
+  }
+
+  toggleLogo(hide: boolean): void {
+    const width:number = parseInt(localStorage.getItem("screenWidth") as string);
+    if(width <= 700){
+      this.logoHidden = hide;
+    }
   }
 
 }

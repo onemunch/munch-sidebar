@@ -10,4 +10,6 @@ export const SET_NOTIFICATION = createAction('[Notification] Set Notification', 
 export const CLEAR_NOTIFICATION = createAction('[Notification] Clear Notification');
 export const FETCH_LOCAL_STORAGE = createAction('[Data] Fetch Data From LocalStorage');
 export const FETCHED_LOCAL_STORAGE = createAction('[Data] Fetched Data From LocalStorage', props<{ data: any }>());
+export const ADJUST_SCREEN_SIZE = createAction('[Screen] Screen Size Changed');
+export const ADJUSTED_SCREEN_SIZE = createAction('[Screen] Screen Size Adjusted', props<{data:any}>());
 
