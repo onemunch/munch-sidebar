@@ -1,0 +1,50 @@
+<div [ngClass]="{ 'fullContainer': isSidebarStatic(mainService.localData$ | async)}">
+    <app-menu></app-menu>
+
+    <div style="width: 100vw;" [ngClass]="{ 'mainContent': isSidebarStatic(mainService.localData$ | async)}">
+        <p-menubar >
+            <ng-template pTemplate="start">
+
+                <a pRipple *ngIf="isSidebarStatic(mainService.localData$ | async)"
+                    class="m-3 flex align-items-center cursor-pointer gap-2 border-round text-700 hover:surface-100 transition-duration-150 transition-colors p-ripple">
+                    <!-- <p-avatar
+                        image="https://media.licdn.com/dms/image/D4E03AQFg5XVMkOIjow/profile-displayphoto-shrink_800_800/0/1682304130888?e=2147483647&v=beta&t=Kuke8N98t-eQdxtGYbQbOzkKRgFKlZm_MsnkLFvwTFA"
+                        shape="circle" /> -->
+                        <p-avatar
+                        styleClass="bordered-image"
+                        image="./../../assets/imgs/avatar.png"
+                        shape="circle" />
+                    <!-- <span class="font-bold">Popito Kakita</span> -->
+                    <span>
+                        <span class="font-bold pop-item authenticationLink">Log In</span> | 
+                        <span class="font-bold pop-item authenticationLink">Sign Up</span>
+                    </span>
+                </a>
+
+                <div id="menuButtonCont">
+                    <i class="pi pi-bars clickable" id="menuButton"
+                    *ngIf="!isSidebarStatic(mainService.localData$ | async)"
+                    (click)="mainService.sidebarVisible = true"></i>
+                </div>
+
+                <!-- <img *ngIf="!isSidebarStatic(mainService.localData$ | async)"
+                    (click)="mainService.sidebarVisible = true" id="miniLogo"
+                    src="./../../../assets/imgs/munchMitten.png" width="50px" class="mr-2" /> -->
+
+                    <!-- isSidebarStatic(mainService.localData$ | async) = {{isSidebarStatic(mainService.localData$ | async)}} -->
+                    <div [ngClass]="{'transparent': logoHidden, 'invisible': isSidebarStatic(mainService.localData$ | async)  }" id="textLogoCont">
+                        <img id="textLogo" src="./../../../assets/imgs/munchLogoText.png" />
+                    </div>
+
+
+
+            </ng-template>
+
+           
+            
+            <ng-template pTemplate="end">
+                <input (focus)="toggleLogo(true)" (blur)="toggleLogo(false)" id="globalSearchbar" type="text" pInputText placeholder="Search" class="w-full" />
+            </ng-template>
+        </p-menubar>
+    </div>
+</div>

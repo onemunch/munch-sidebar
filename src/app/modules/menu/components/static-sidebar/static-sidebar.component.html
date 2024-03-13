@@ -1,0 +1,27 @@
+<div id="staticSidebar">
+    <div class="flex flex-column h-full">
+        <div class="flex align-items-center justify-content-between px-4 pt-3 flex-shrink-0">
+            <span class="inline-flex align-items-center gap-2">
+                <div id="munchLogo" class="backImageCon"> </div>
+            </span>
+        </div>
+        <div class="overflow-y-auto">
+            <ul class="list-none p-0 m-0 overflow-hidden">
+
+                <general-menu></general-menu>
+                <consumer-menu></consumer-menu>
+                <creator-menu></creator-menu>
+            </ul>
+
+        </div>
+        <div class="mt-auto">
+            <hr class="mb-3 mx-3 border-top-1 border-none surface-border" />
+
+            <div id="switchCont">
+                <p-inputSwitch inputId="isStaticSidebar" [(ngModel)]="isStaticSidebar"
+                    (click)="fixSidebarPosition()"></p-inputSwitch>
+                <label for="isStaticSidebar" class="adjustedLabel">{{'Static Sidebar'}}</label>
+            </div>
+        </div>
+    </div>
+</div>
